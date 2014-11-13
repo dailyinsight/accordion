@@ -26,7 +26,7 @@
     },
     events: {
       'tap:delegate(h1, h2, h3, h4, h5, h6, div.x-accordion-heading)': function(event){
-        select.call(event.target.parentNode, this);
+        select.call(this.parentNode, this);
       },
       'keydown:delegate(h1, h2, h3, h4, h5, h6, div.x-accordion-heading)': function(event){
         switch(event.keyCode) {
