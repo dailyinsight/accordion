@@ -1,7 +1,7 @@
 
 (function(){
 
-  var hlevels = 'h1, h2, h3, h4, h5, h6',
+  var hlevels = 'h1, h2, h3, h4, h5, h6, div.x-accordion-heading',
     select = function(heading){
       xtag.query(heading.parentNode, hlevels).forEach(function(el, idx){
         if (el == heading) {
@@ -25,10 +25,10 @@
       }
     },
     events: {
-      'tap:delegate(h1, h2, h3, h4, h5, h6)': function(event){
+      'tap:delegate(h1, h2, h3, h4, h5, h6, div.x-accordion-heading)': function(event){
         select.call(event.target.parentNode, this);
       },
-      'keydown:delegate(h1, h2, h3, h4, h5, h6)': function(event){
+      'keydown:delegate(h1, h2, h3, h4, h5, h6, div.x-accordion-heading)': function(event){
         switch(event.keyCode) {
           case 13: select.call(event.target.parentNode, this); break;
           case 37: event.target.parentNode.selectPrevious(); break;

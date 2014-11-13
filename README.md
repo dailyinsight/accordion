@@ -1,6 +1,6 @@
 ## Syntax
 
-The accordion operates by using a pairing of html header tags ```h1-h6``` with an adjacent ```<section>``` tag.  The header tag acts as the toggler/click target.  To have a section open by default, set the ```selected``` attribute on the header or set the ```selected-index``` attribute on the accordion.
+The accordion operates by using a pairing of html header tags ```h1-h6``` (or a div with the `.x-accordion-heading` class) with an adjacent ```<section>``` tag.  The header tag acts as the toggler/click target.  To have a section open by default, set the ```selected``` attribute on the header or set the ```selected-index``` attribute on the accordion.
 
 ```
 <x-accordion>
